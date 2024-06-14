@@ -19,7 +19,7 @@ const createTableSql = `
   )
 `
 let data = ''
-
+console.log('Creating table...')
 db.query(createTableSql, err => {
   if (err) return console.error('Error creating table:', err)
   stream.on('data', chunk => {
